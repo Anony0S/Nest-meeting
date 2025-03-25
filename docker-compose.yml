@@ -14,7 +14,7 @@ services:
   mysql-container:
     image: mysql
     volumes:
-      - C:\Users\Anony\Documents\MySQL\test:/var/lib/mysql
+      - /var/lib/mysql/nest-meeting:/var/lib/mysql
     environment:
       MYSQL_DATABASE: meeting_room_booking_system
       MYSQL_ROOT_PASSWORD: admin123
@@ -23,7 +23,7 @@ services:
   redis-container:
     image: redis
     volumes:
-      - C:\Users\Anony\Documents\Redis\RedisTest:/data
+      - /var/lib/redis/nest-meeting:/data
     networks:
       - common-network
 networks:
